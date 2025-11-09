@@ -1,18 +1,43 @@
-
-
 /* Navbar */
+.navbar {
+    position: relative;
+    z-index: 10; /* ensure navbar is above jumbotron */
+}
 .navbar-brand {
-    font: 32px Viga;
+  font-family: 'Viga', sans-serif;
+  font-size: 36px;
+  color: #ffffff !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
 }
 
+/* Hover effect for a refined look */
+.navbar-brand:hover {
+  color: #dc3545 !important;
+  text-shadow: 0 0 8px rgba(224, 168, 153, 0.5);
+  transform: scale(1.05);
+}
+/*.navbar-brand {
+    font-size: 32px;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    font: 32px Viga;
+}*/
 
 /* Jumbotron */
 .jumbotron {
-    background: url(../img/jumbotron-bg.jpg);
+    background: url(../img/imt-background\ 2.jpg);
     background-size: cover;
-    height: 540px;
+    width: 100%;
+    height: 800px;
     position: relative;
-    z-index: -1;
+    z-index: 0;
+     
 }
 
 .jumbotron::after {
@@ -43,8 +68,6 @@
 .jumbotron .display-4 span {
     font-weight: 500;
 }
-
-
 
 /* Info Panel */
 .info-panel {
@@ -97,47 +120,6 @@
 }
 
 
-/* Testimonial */
-.testimonial {
-    margin-top: 130px;
-}
-
-.testimonial p {
-    font-size: 1.4em;
-    text-align: center;
-    font-weight: 200;
-    font-style: italic;
-    margin-bottom: 30px;
-}
-
-.testimonial img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    border-radius: 50%;
-    filter: grayscale(1);
-}
-
-.testimonial .img-main {
-    width: 100px;
-    height: 100px;
-    margin-top: -5px;
-    filter: grayscale(0);
-}
-
-.testimonial .info-text h5 {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.testimonial .info-text p {
-    font-size: 12px;
-    margin-top: -5px;
-    color: #acacac;
-    font-style: normal;
-}
-
-
 
 /* Utility */
 .tombol {
@@ -153,7 +135,7 @@
     
     .navbar-brand, .nav-link {
         color: white !important;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     .nav-link {
@@ -187,10 +169,133 @@
     .workingspace {
         text-align: left;
     }
+}
 
+    .tombol {
+      padding: 12px 25px;
+      background-color: #dc3545; /* Red button */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    /* Funky Gallery Header */
+.gallery-header {
+  text-align: center;
+  margin: 50px 0 20px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #dc3545;
+  letter-spacing: 2px;
+  animation: bounce 1.5s infinite;
+}
 
-    .testimonial p {
-        font-size: 2em;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.imt-text {
+  max-width: 700px;       /* keeps text in a neat column */
+  margin: 30px auto;       /* centers the text */
+  padding: 25px;
+  background-color: #fff0f5;  /* soft, fun background (lavender) */
+  border-left: 6px solid #dc3545; /* stylish accent */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* modern font */
+  line-height: 1.7;       /* makes text airy and readable */
+  color: #333;            /* professional dark text */
+  animation: fadeIn 1.5s ease-in-out; /* gentle fade-in effect */
+}
+
+.imt-text p strong {
+  color: #dc3545;          /* accent your brand color */
+}
+
+.imt-text p {
+  font-size: 1.1rem;       /* slightly larger text for readability */
+}
+
+/* Optional fun animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
     }
 
+    .gallery-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 60px;
+      padding: 25px 0;
+      background-color: #fff0f5; /* soft background that matches your imt-text box */
+      border-top: 4px solid #dc3545; /* red accent line for brand consistency */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /*.social-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }*/
+.social-links p {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
+
+.social-links .links {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #dc3545; /* same red as gallery header */
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.divider {
+  color: #999;
+  font-weight: 300;
+}
+
+
+
+
+
